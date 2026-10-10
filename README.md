@@ -3,7 +3,6 @@
 Bu uygulama bilgisayarınızdaki Spotify'dan açılan müziği telefonunuzdan kontrol etmenize yarar
 
 
-
 **Not :** Bu proje yalnızca Windows'da dügzün çalışır. Farklı işletim sistemlerinde hata alma ihtimaliniz vardır.
 
 **Not :** Aşağıdaki kurulum ve çalıştırma adımları Windows 10 veya 11'e aittir.
@@ -28,7 +27,6 @@ Kütüphaneler indikten sonra ;
 ```batch
 python main.py
 ```
-
 
 # Kullanım
 Bilgisayardan server'ı başlattıkdan sonra telefonunuzdan `http://{PC_IP}:5000` adresini açın
