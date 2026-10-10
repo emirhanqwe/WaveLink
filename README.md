@@ -1,4 +1,4 @@
-# WaveLink
+# WaveLink 
 
 This application allows you to control and play music from Spotify using your phone.
 
