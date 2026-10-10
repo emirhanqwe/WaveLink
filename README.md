@@ -19,7 +19,7 @@ python install -r reqs.txt
 ```
 
 Kütüphaneler indikten sonra ;
-- [https://developer.spotify.com/dashboard] (Spotify Developer Dashboard) sitesinden bir uygulama oluşturun.
+- `https://developer.spotify.com/dashboard` sitesinden bir uygulama oluşturun.
 - Oluşturduğunuz uygulamanın Redirect URI'sine `http://localhost:8888/callback` yazın.
 - Uygulamanın `Client ID` ve `Client Secret` verilerini `config.json` dosyasına girin.
 
