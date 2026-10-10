@@ -1,14 +1,14 @@
 # WaveLink
 
-Bu uygulama bilgisayarınızdaki Spotify'dan açılan müziği telefonunuzdan kontrol etmenize yarar
+This application allows you to control and play music from Spotify using your phone.
 
 
-**Not :** Bu proje yalnızca Windows'da dügzün çalışır. Farklı işletim sistemlerinde hata alma ihtimaliniz vardır.
+**Note :** This project works correctly only on Windows. You may encounter errors on other operating systems.
 
-**Not :** Aşağıdaki kurulum ve çalıştırma adımları Windows 10 veya 11'e aittir.
+**Note :** The installation and execution steps below apply to Windows 10 or 11.
 
-# Kurulum
-Gerekenler :
+# Installition
+Requirements :
   - Windows 10/11
   - Python 3.10+
   - Spotify Developer App Credentials
@@ -17,17 +17,17 @@ Gerekenler :
 python install -r reqs.txt
 ```
 
-Kütüphaneler indikten sonra ;
-- https://developer.spotify.com/dashboard sitesinden bir uygulama oluşturun.
-- Oluşturduğunuz uygulamanın Redirect URI'sine `http://localhost:8888/callback` yazın ve **Web API** bölümünü işaretleyin.
-- Uygulamanın `Client ID` ve `Client Secret` verilerini `config.json` dosyasına girin.
+After installing the modules:
+- Create an application at https://developer.spotify.com/dashboard.
+- Enter `http://localhost:8888/callback` as the Redirect URI for the application you created and select the **Web API** section.
+- Enter the application's `Client ID` and `Client Secret` into the `config.json` file.
 
 
-# Çalıştırma
+# Running
 ```batch
 python main.py
 ```
 
-# Kullanım
-Bilgisayardan server'ı başlattıkdan sonra telefonunuzdan `http://{PC_IP}:5000` adresini açın
-Telefonu yatay moda soktuktan sonra kullanmaya başlayabilirsiniz.
+# Usage
+After starting the server on your computer, open `http://{PC_IP}:5000` on your phone.
+You can start using it after switching your phone to landscape mode.
