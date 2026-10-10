@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>WaveLink Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="orientation-warning">
+        <div style="font-size: 3rem;">📱</div>
+        <h2>Please Rotate Your Device</h2>
+        <p>This app is designed to be used in landscape mode.</p>
+    </div>
+
+    <div class="bg-overlay" id="bg-overlay"></div>
+    
+    <div class="container">
+        <div class="header-controls">
+            <button id="fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="album-section">
+            <div class="album-art" id="art">
+                <div class="placeholder">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="song-title" id="title">Song Title</div>
+            <div class="song-artist" id="artist">Artist</div>
+
+            <div class="progress-container">
+                <span class="time-current" id="current-time">0:00</span>
+                <div class="progress-bar" onpointerdown="seekTo(event)">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="time-total" id="total-time">0:00</span>
+            </div>
+            
+            <div class="controls">
+                <button onclick="control('prev')" class="control-btn" title="Previous">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                <button onclick="control('play_pause')" id="pp-btn" class="play-btn" title="Play/Pause">
+                    <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                </button>
+                <button onclick="control('next')" class="control-btn" title="Next">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
