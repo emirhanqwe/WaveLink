@@ -1,8 +1,6 @@
 # WaveLink
-Phone-controlled Windows media playback
 
 Bu uygulama bilgisayarınızdaki Spotify'dan açılan müziği telefonunuzdan kontrol etmenize yarar
-
 
 
 
